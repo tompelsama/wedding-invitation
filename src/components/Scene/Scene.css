@@ -1,0 +1,124 @@
+canvas {
+    overscroll-behavior: none;
+}
+
+.scrolly-note {
+    position: absolute;
+    /* background-color: rgba(255,255,255,0.2); */
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    width: 100%;
+    max-width: 800px;
+    padding: 15px 20px;
+    border-radius: 7px;
+    text-align: center;
+    color: black;
+    /* visibility: hidden; */
+    pointer-events: none;
+}
+
+.event-detail {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.event-detail-col {
+    flex: 0 0 calc(50% - 10px);
+    margin: 0 5px;
+}
+
+.event-detail-subtitle {
+    font-size: 1.5rem;
+}
+
+.rvsp-button {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 7px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Balance Groovy", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+    background-color: #716eef;
+    border-color: #716eef;
+    color: #fff; 
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.rvsp-button:after,
+.rvsp-button:before {
+    width: 49px;
+    height: 35px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4b48cb;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0);
+    content: "";
+    z-index: -1;
+}
+
+.rvsp-button:before {
+    top: -8px;
+    left: 10%;
+}
+
+.rvsp-button:after {
+    bottom: -8px;
+    right: 15%;
+}
+
+.rvsp-button:hover {
+    background-color: #4b48cb;
+    border-color: #4b48cb;
+    color: white;
+}
+
+.rvsp-button:hover:after,
+.rvsp-button:hover:before {
+    transform: scale(1);
+}
+
+.b-account {
+   
+}
+
+.b-account-container {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    background-color: rgba(255,255,255, 0.7);
+    border-radius: 5px;
+}
+
+.b-account-container span {
+    display: block;
+    font-family: "Balance Groovy", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 800px) {
+    .scrolly-note {
+        top: 12px;
+        padding: 10px 15px;
+    }
+
+    .event-detail-subtitle {
+        font-size: 1rem;
+    }
+
+    .rvsp-button {
+        font-size: 1rem;
+        padding: 5px 20px;
+        margin-top: 0;
+    }
+
+    .b-account-container span {
+        font-size: 14px;
+    }
+}
+
