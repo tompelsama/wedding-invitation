@@ -29,7 +29,7 @@ export default function App() {
       try {
         const response = await axios.get('/invitation.json')
         const matchedData = response.data.find(item => item.uuid === getIdFromQuery())
-        console.log(matchedData)
+  
         if(matchedData) {
           setData(matchedData)
         }
